@@ -28,7 +28,7 @@ const questions = [
         type: 'checkbox',
         message: 'What is the License of the project?',
         name: 'license',
-        choices: ["Apache License 2.0", "MIT License", "Boost Software License 1.0", "Eclipse Public License 2.0", "None"],
+        choices: ["Apache2.0", "MIT", "Boost1.0", "BSD3", "None"],
     },
     {
         type: 'input',
@@ -42,31 +42,43 @@ const questions = [
     },
     {
         type: 'input',
-        message: 'What are questions of the project?',
+        message: 'What is your email if the user has questions',
         name: 'questions',
     },
 ];
 
+//get a license badge for the read me
+function licenseBadge(license) {
+    if(license !== "none"){
+        return `![github license](https://img.shields.io/badge/license-${license}-yellowgreen.svg)`
+    }else {
+        return "No license used";
+    }
+}
+
 //marks down the infro given when making the readme file
 function markdown(data) {
     return `# ${data.title} by ${data.contributing}
+${licenseBadge(data.license)}
 ## Table of Contents
-1. Description
-2. Usage
-3. Installation
-4. Test
-5. Questions
-6. License
+1. [Description](#Description)
+2. [Usage](#Usage)
+3. [Installation](#Installation)
+4. [Test](#Test)
+5. [Questions](#Questions)
+6. [License](#License)
 ## Description
 ${data.description}
 ## Usage
 ${data.usage}
 ## Installation
 ${data.installation}
+## Contributers
+${data.contributing}
 ## Test
-${data.test}
-## Questions
-${data.questions}
+${data.tests}
+## Questions?
+Email me at ${data.questions}
 ## License
 ${data.liscense}`
 }
