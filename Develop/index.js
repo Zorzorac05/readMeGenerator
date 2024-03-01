@@ -11,17 +11,27 @@ const questions = [
     },
     {
         type: 'input',
+        message: 'What is your name?',
+        name: 'name',
+    },
+    {
+        type: 'input',
+        message: 'What is your github profile',
+        name: 'git',
+    },
+    {
+        type: 'input',
         message: 'What is the descrition of the project',
         name: 'description',
     },
     {
         type: 'input',
-        message: 'What is Installation of the project?',
+        message: 'What is the Installation instructions of the project?',
         name: 'installation',
     },
     {
         type: 'input',
-        message: 'What is the usage of the project?',
+        message: 'What is the usage information of the project?',
         name: 'usage',
     },
     {
@@ -58,7 +68,7 @@ function licenseBadge(license) {
 
 //marks down the infro given when making the readme file
 function markdown(data) {
-    return `# ${data.title} by ${data.contributing}
+    return `# ${data.title} by ${data.name}
 ${licenseBadge(data.license)}
 ## Table of Contents
 1. [Description](#Description)
@@ -78,6 +88,8 @@ ${data.contributing}
 ## Test
 ${data.tests}
 ## Questions?
+My name is ${data.name}
+My github is [${data.git}](https://github.com/${data.git})
 Email me at ${data.questions}
 ## License
 ${data.liscense}`

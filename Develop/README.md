@@ -1,5 +1,5 @@
-# read me by me
-![github license](https://img.shields.io/badge/license-MIT-yellowgreen.svg)
+# README generator by Alex
+![github license](https://img.shields.io/badge/license-Boost1.0-yellowgreen.svg)
 ## Table of Contents
 1. [Description](#Description)
 2. [Usage](#Usage)
@@ -8,16 +8,18 @@
 5. [Questions](#Questions)
 6. [License](#License)
 ## Description
-its a project
+This project takes promts from the user to generate a read me file
 ## Usage
-careful
+used to create a read me for a project
 ## Installation
-it exist
+install npm inquirer
 ## Contributers
-me
+Alex
 ## Test
-nope
+it works
 ## Questions?
-Email me at email
+My name is Alex
+My github is [Zorzorac05](https://github.com/Zorzorac05)
+Email me at ajryder31@gmail.com
 ## License
 undefined
